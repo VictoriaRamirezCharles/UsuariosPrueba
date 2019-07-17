@@ -11,10 +11,10 @@ import { UserServiceService } from '../services/user-service.service';
 export class HomePage {
   users: any[] = [];
   constructor(public userService: UserServiceService) {
-    this.ionViewDidLoad();
+    this.loadingUsers();
   }
 
-  ionViewDidLoad(){
+  loadingUsers(){
     this.userService.getUsers()
     .subscribe(
       (data) => { // Success
