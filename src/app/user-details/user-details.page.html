@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card color="dark-tint">
+      <ion-card-header>
+          <ion-item *ngFor= "let detalles of details" color="dark-tint">
+              <img [src]="detalles.picture.large">
+              </ion-item>
+      </ion-card-header>
+      <ion-card></ion-card>
+      <ion-card-content>
+          <ion-item *ngFor=" let detalles of details" color="dark-tint">
+            <h3>
+                Nombre: {{ detalles.name.first | uppercase }} {{ detalles.name.last | uppercase }}<br>
+                Edad: {{ detalles.dob.age }} <br>
+                Celular: {{ detalles.cell }} <br>
+                Télefono: {{ detalles.phone }} <br>
+                Email: {{ detalles.email }}</h3>
+          </ion-item>
+      </ion-card-content> 
+    </ion-card>
+
+    <ion-card color="dark-shade">
+
+      <ion-item color="secondary">
+        <ion-label>Resumen</ion-label>
+      </ion-item>
+
+        <ion-card-content>
+            <p> La vida es bella. </p>
+        </ion-card-content> 
+    </ion-card>
+
+    <ion-card color="secondary">
+          <ion-card-content>
+              <h6> www.probandoapi.com.do 2019 ° </h6>
+          </ion-card-content> 
+      </ion-card>
+</ion-content>

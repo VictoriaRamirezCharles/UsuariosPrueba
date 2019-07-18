@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-title>
       Usuarios
     </ion-title>
@@ -8,7 +8,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let user of users">
+    <ion-item *ngFor="let user of users" routerLink="/user-details" detail>
       <ion-avatar item-start>
         <img [src]="user.picture.thumbnail">
       </ion-avatar>
